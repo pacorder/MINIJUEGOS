@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Juegos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Usamos la fuente Inter como base */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #141414; /* Tono oscuro principal similar a Netflix */
+        }
+        /* Efecto de sombra sutil para el texto del hero */
+        .hero-text-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        /* Estilo para el gradiente de fondo del hero */
+        .hero-background {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://placehold.co/1920x1080/1a1a1a/1a1a1a?text=') no-repeat center center;
+            background-size: cover;
+        }
+        /* Animación para las tarjetas de juego */
+        .game-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-gradient-to-b from-black to-transparent p-4 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-red-600 tracking-wider">MIS JUEGOS</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-background h-screen flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl md:text-7xl font-black uppercase hero-text-shadow">Tus Próximos Desafíos</h2>
+                <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto hero-text-shadow">
+                    Explora la colección de juegos web que he creado. Simples, adictivos y listos para jugar.
+                </p>
+            </div>
+        </section>
+
+        <!-- Games Grid Section -->
+        <section class="container mx-auto px-6 py-16 md:py-24 -mt-24 relative z-1">
+            <h3 class="text-2xl md:text-4xl font-bold mb-8 border-l-4 border-red-600 pl-4">Mi Colección</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Game Card 1: Mini Sudoku 4x4 -->
+                <div class="game-card bg-[#1f1f1f] rounded-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x340/101010/e50914?text=Sudoku+4x4" alt="Imagen del juego Mini Sudoku 4x4" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2">Mini Sudoku Clásico 4x4</h4>
+                        <p class="text-gray-400 mb-6 h-20">
+                            Perfecto para principiantes y para quienes recién se inician en el mundo del Sudoku. Una introducción ideal a las reglas de este clásico juego de lógica.
+                        </p>
+                        <a href="minisudoku4x4.html" target="_blank" class="inline-block w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition-transform duration-300 group-hover:scale-105">
+                            Jugar Ahora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 2: Mini Sudoku 6x6 -->
+                <div class="game-card bg-[#1f1f1f] rounded-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x340/101010/e50914?text=Sudoku+6x6" alt="Imagen del juego Mini Sudoku 6x6" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2">Mini Sudoku 6x6</h4>
+                        <p class="text-gray-400 mb-6 h-20">
+                            Una versión más rápida y compacta del Sudoku. Ideal para una partida ágil en cualquier momento. ¡Perfecto para principiantes y expertos!
+                        </p>
+                        <a href="minisudoku6x6.html" target="_blank" class="inline-block w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition-transform duration-300 group-hover:scale-105">
+                            Jugar Ahora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 3: More Games -->
+                <div class="game-card bg-[#1f1f1f] rounded-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x340/101010/e50914?text=More Games" alt="Imagen del juego Mini Sudoku 4x4" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2">More Games</h4>
+                        <p class="text-gray-400 mb-6 h-20">
+                            Muy Pronto
+                        </p>
+                        <a href="#" class="inline-block w-full text-center bg-gray-700 text-gray-400 font-bold py-3 px-6 rounded-md cursor-not-allowed">
+                            Próximamente
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto text-center text-gray-500">
+            <p>&copy; 2025 Mi Portafolio de Juegos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
